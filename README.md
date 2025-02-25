@@ -1,6 +1,43 @@
-# COMP4513-A1
+# COMP4513 (Winter 2025)
+### Assignment 1 - Node API, Orlando Ormon, February 2025
+## Project Overview
+This repository contains the code for Assignment 1 in COMP4513. The assignment is an API that was built using Node.js, with data stored in a Supabase database. The application is hosted on Render, allowing users to query various endpoints to retrieve detailed information. The data is returned in JSON format, and the API includes error handling for cases such as invalid parameters or missing data.
 
-links:
+## Built With:
+ - Node.Js - JS Runtime
+ - Express - Routing
+ - Supabase - Online Database & Query Builder
+ - Render - Hosting
+
+## API Endpoints
+| **Endpoint**                         | **Description**                                                                                                       |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| `/api/eras`                          | Returns all the eras                                                                                                  |
+| `/api/galleries`                     | Returns all the galleries                                                                                             |
+| `/api/galleries/ref`                 | Returns the specified gallery                                                                                         |
+| `/api/galleries/country/substring`   | Returns galleries whose `galleryCountry` begins with the provided substring                                           |
+| `/api/artists`                       | Returns all the artists                                                                                               |
+| `/api/artists/ref`                   | Returns the specified artist                                                                                          |
+| `/api/artists/search/substring`      | Returns artists whose last name begins with the provided substring                                                    |
+| `/api/artists/country/substring`     | Returns artists whose nationality begins with the provided substring                                                  |
+| `/api/paintings`                     | Returns all paintings                                                                                                 |
+| `/api/paintings/sort/titleORyear`    | Returns all paintings, sorted by either `title` or `yearOfWork`                                                       |
+| `/api/paintings/ref`                 | Returns the specified painting                                                                                        |
+| `/api/paintings/search/substring`    | Returns paintings whose `title` contains the provided substring                                                       |
+| `/api/paintings/years/start/end`     | Returns paintings between two years, ordered by `yearOfWork`                                                          |
+| `/api/paintings/galleries/ref`       | Returns all paintings in a given gallery                                                                              |
+| `/api/paintings/artist/ref`          | Returns all paintings by a given artist                                                                               |
+| `/api/paintings/artists/country/ref` | Returns all paintings by artists whose nationality begins with the provided substring                                 |
+| `/api/genres`                        | Returns all the genres                                                                                                |
+| `/api/genres/ref`                    | Returns the specified genre                                                                                           |
+| `/api/genres/painting/ref`           | Returns genres used in a given painting, ordered by `genreName`                                                       |
+| `/api/paintings/genre/ref`           | Returns all paintings for a given genre                                                                               |
+| `/api/paintings/era/ref`             | Returns all paintings for a given era                                                                                 |
+| `/api/counts/genres`                 | Returns genre names and the number of paintings for each genre, sorted by the number of paintings (fewest to most)    |
+| `/api/counts/artists`                | Returns artist names (first and last) and the number of paintings for each artist, sorted by most to fewest paintings |
+| `/api/counts/topgenres/ref`          | Returns genre names and the number of paintings for genres with more than a set number of paintings                   |
+
+## Links For Testing Purposes:
 
 1. [https://comp4513-a1-orlando-ormon.onrender.com/api/eras](https://comp4513-a1-orlando-ormon.onrender.com/api/eras)
 2. [https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/years/1800/1850](https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/years/1800/1850)
