@@ -525,9 +525,6 @@ app.get("/api/counts/topgenres/:threshold", async (req, res) => {
   if (error) {
     res.status(500).json({ error: error.message });
     return;
-  } else if (genres.length == 0) {
-    res.status(404).json({ error: "No data found matching that criteria." });
-    return;
   }
 
   const result = genres.filter(
@@ -535,6 +532,11 @@ app.get("/api/counts/topgenres/:threshold", async (req, res) => {
   );
 
   result.sort((a, b) => b.paintinggenres[0].count - a.paintinggenres[0].count);
+
+  if (result.length == 0) {
+    res.status(404).json({ error: "No data found matching that criteria." });
+    return;
+  }
 
   res.json(result);
 });
