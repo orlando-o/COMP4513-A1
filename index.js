@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 const { createClient } = require("@supabase/supabase-js");
-const { supabaseApiKey, supabaseURL } = require("./apiInfo.js"); // apiInfo.js present in .gitignore file.
-const supabase = createClient(supabaseURL, supabaseApiKey);
+require("dotenv").config();
+const { SUPABASE_API_KEY, SUPABASE_URL } = process.env;
+const supabase = createClient(SUPABASE_URL, SUPABASE_API_KEY);
 
 // Returns all the eras
 app.get("/api/eras", async (req, res) => {
