@@ -11,7 +11,7 @@ links:
 7. [https://comp4513-a1-orlando-ormon.onrender.com/api/galleries/Calgary](https://comp4513-a1-orlando-ormon.onrender.com/api/galleries/Calgary)
 8. [https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/artist/666](https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/artist/666)
 9. [https://comp4513-a1-orlando-ormon.onrender.com/api/galleries/country/fra](https://comp4513-a1-orlando-ormon.onrender.com/api/galleries/country/fra)
-10. [https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/artist/country/tial](https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/artist/country/tial)
+10. [https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/artists/country/tial](https://comp4513-a1-orlando-ormon.onrender.com/api/paintings/artists/country/tial)
 11. [https://comp4513-a1-orlando-ormon.onrender.com/api/artists](https://comp4513-a1-orlando-ormon.onrender.com/api/artists)
 12. [https://comp4513-a1-orlando-ormon.onrender.com/api/genres](https://comp4513-a1-orlando-ormon.onrender.com/api/genres)
 13. [https://comp4513-a1-orlando-ormon.onrender.com/api/artists/12](https://comp4513-a1-orlando-ormon.onrender.com/api/artists/12)
