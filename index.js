@@ -156,14 +156,15 @@ app.get("/api/paintings", async (req, res) => {
 
 // Returns all the paintings, sorted by either title or yearOfWork
 app.get("/api/paintings/sort/:sortCriteria", async (req, res) => {
-  if (
-    req.params.sortCriteria != "title" &&
-    req.params.sortCriteria != "yearOfWork"
-  ) {
+  if (req.params.sortCriteria != "title" && req.params.sortCriteria != "year") {
     res.status(400).json({
-      error: "Bad sort criteria. Choose either 'title' or 'yearOfWork'",
+      error: "Bad sort criteria. Choose either 'title' or 'year'",
     });
     return;
+  }
+  let sortCriteria = req.params.sortCriteria;
+  if (sortCriteria == "year") {
+    sortCriteria = "yearOfWork";
   }
 
   let { data: paintings, error } = await supabase
@@ -177,7 +178,7 @@ app.get("/api/paintings/sort/:sortCriteria", async (req, res) => {
         galleries:galleryId (*)
     `
     )
-    .order(req.params.sortCriteria, { ascending: true });
+    .order(sortCriteria, { ascending: true });
 
   if (error) {
     res.status(500).json({ error: error.message });
