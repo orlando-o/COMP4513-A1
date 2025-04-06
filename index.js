@@ -445,8 +445,20 @@ app.get("/api/paintings/genre/:id", async (req, res) => {
     res.status(404).json({ error: "No data found matching that criteria." });
     return;
   }
+  const result = paintings.map(({ genres, paintings }) => {
+    return {
+      ...paintings,
+      genres: {
+        genreId: genres.genreId,
+        genreName: genres.genreName,
+        description: genres.description,
+        wikiLink: genres.wikiLink,
+        era: genres.era,
+      },
+    };
+  });
 
-  res.json(paintings);
+  res.json(result);
 });
 
 // Returns all the paintings for a given era
