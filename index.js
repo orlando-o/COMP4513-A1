@@ -427,10 +427,7 @@ app.get("/api/paintings/genre/:id", async (req, res) => {
       genreId, genreName, description, wikiLink,
       era:eraId (eraId, eraName, eraYears)
     ),
-    paintings:paintingId (
-      paintingId, title, yearOfWork, imageFileName,
-      artists:artistId (firstName, lastName)
-    )
+    paintings:paintingId (*)
         `
     )
     .eq("genreId", req.params.id)
