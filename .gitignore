@@ -1,2 +1,6 @@
+.gitignore
 node_modules
 .env
+apiInfo.js
+COMP 4513 Assignment 1.pdf
+.vscode/settings.json

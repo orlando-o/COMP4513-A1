@@ -427,7 +427,13 @@ app.get("/api/paintings/genre/:id", async (req, res) => {
       genreId, genreName, description, wikiLink,
       era:eraId (eraId, eraName, eraYears)
     ),
-    paintings:paintingId (*)
+    paintings:paintingId (
+         paintingId, imageFileName, title, shapeId, museumLink, accessionNumber,
+         copyrightText, description, excerpt, yearOfWork, width, height, medium, 
+         cost, MSRP, googleLink, googleDescription, wikiLink, jsonAnnotations,
+         artists:artistId (*), 
+         galleries:galleryId (*)
+     )
         `
     )
     .eq("genreId", req.params.id)
